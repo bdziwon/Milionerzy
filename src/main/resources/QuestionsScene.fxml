@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="600.0" prefWidth="1066.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scenes.QuestionsScene">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="266.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="532.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="266.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="40.0" minHeight="4.0" prefHeight="20.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Pane id="style" prefHeight="465.0" prefWidth="827.0" styleClass="background" GridPane.columnSpan="3" GridPane.rowSpan="3">
+         <effect>
+            <GaussianBlur radius="1.0" />
+         </effect></Pane>
+      <Pane opacity="0.9" prefHeight="465.0" prefWidth="827.0" style="-fx-background-color: rgba(30,20,56,1); -fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </Pane>
+      <VBox alignment="CENTER" cache="true" depthTest="ENABLE" prefHeight="200.0" prefWidth="100.0" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <TableView fx:id="questions" prefHeight="493.0" prefWidth="533.0" style="-fx-background-color: transparent; -fx-text-background-color: white;" styleClass="table-view">
+              <columns>
+                <TableColumn fx:id="questionColumn" prefWidth="291.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="Pytanie" />
+                <TableColumn fx:id="answerColumn" minWidth="0.0" prefWidth="121.0" text="Odpowiedź" />
+                  <TableColumn fx:id="difficultyColumn" minWidth="7.0" prefWidth="120.0" text="Trudność (1-12)" />
+              </columns>
+            </TableView>
+            <FlowPane prefHeight="45.0" prefWidth="533.0">
+               <children>
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: rgb(0,39,105); -fx-background-radius: 15;" styleClass="button" text="Dodaj" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="7.0" left="5.0" right="5.0" top="7.0" />
+                     </padding>
+                     <FlowPane.margin>
+                        <Insets bottom="10.0" left="10.0" top="5.0" />
+                     </FlowPane.margin>
+                  </Button>
+                  <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeButtonAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: rgb(0,39,105); -fx-background-radius: 15;" styleClass="button" text="Usuń" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="7.0" left="5.0" right="5.0" top="7.0" />
+                     </padding>
+                     <FlowPane.margin>
+                        <Insets bottom="10.0" left="10.0" top="5.0" />
+                     </FlowPane.margin>
+                  </Button>
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: rgb(0,39,105); -fx-background-radius: 15;" styleClass="button" text="Wróć" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="7.0" left="5.0" right="5.0" top="7.0" />
+                     </padding>
+                     <FlowPane.margin>
+                        <Insets bottom="10.0" left="10.0" top="5.0" />
+                     </FlowPane.margin>
+                  </Button>
+               </children>
+            </FlowPane>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

@@ -1,0 +1,56 @@
+.background{
+    -fx-background-image: url("background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 1066 600;
+    -fx-background-position: center center;
+}
+
+.button:hover {
+        -fx-effect: dropshadow(gaussian, maroon, 10, 0.4, 1, 1);
+}
+
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+
+.table-view .column-header-background{
+    -fx-background-color:  rgba(30,40,56,1);
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
+
+.table-row-cell{
+    -fx-background-color:  rgba(30,20,56,0.8);
+}
+
+.table-row-cell:odd{
+    -fx-background-color:  rgba(30,40,56,0.8);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #005797;
+}
+
+.choice-box .label {
+    -fx-text-fill: white;
+}
+
+.choice-box .context-menu {
+    -fx-background-color: rgba(30,20,56,0.8);
+}

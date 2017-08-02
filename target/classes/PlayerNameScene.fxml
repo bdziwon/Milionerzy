@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="600.0" prefWidth="1066.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scenes.PlayerNameScene">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="266.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="532.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="266.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="40.0" minHeight="4.0" prefHeight="20.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="465.0" prefWidth="827.0" styleClass="background" GridPane.columnSpan="3" GridPane.rowSpan="3">
+         <effect>
+            <GaussianBlur radius="1.0" />
+         </effect></Pane>
+      <Pane opacity="0.9" prefHeight="465.0" prefWidth="827.0" style="-fx-background-color: rgba(30,20,56,1); -fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </Pane>
+      <VBox alignment="CENTER" cache="true" prefHeight="200.0" prefWidth="100.0" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <TextField fx:id="playerNameField" focusTraversable="false" maxWidth="290.0" prefHeight="25.0" prefWidth="100.0" promptText="Podaj nazwę gracza.." style="-fx-background-color: rgba(0,39,105,0.6); -fx-background-radius: 15; -fx-text-fill: white;">
+               <padding>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </TextField>
+              <Button fx:id="playButton" mnemonicParsing="false" onAction="#playButtonAction" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: rgb(0,39,105); -fx-background-radius: 15;" styleClass="button" text="Graj" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: rgb(0,39,105); -fx-background-radius: 15;" styleClass="button" text="Wróć" textFill="WHITE">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</GridPane>
